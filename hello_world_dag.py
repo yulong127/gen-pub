@@ -25,7 +25,6 @@ dag = DAG(
 
 # Define the task using KubernetesPodOperator
 hello_world_task = KubernetesPodOperator(
-    namespace='airflow',
     image="python:3.8-slim",
     cmds=["python", "-c"],
     arguments=["print('Hello, World!')"],
